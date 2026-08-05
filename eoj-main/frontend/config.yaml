@@ -1,0 +1,24 @@
+site:
+  name: "OJ System"
+  short_name: "OJ"
+  description: "Online Judge"
+  icon: "default"
+  favicon: "/favicon.svg"
+  theme: "default"          # "default" / "luogu" / "hydro"，控制 UI 配色方案
+
+footer:
+  enabled: true
+  text: ""
+  links: []
+
+login:
+  hero_title: ""
+  hero_subtitle: ""
+  show_github: true
+  show_cpoauth: true
+
+home:
+  title: ""
+
+contact:
+  email: ""
