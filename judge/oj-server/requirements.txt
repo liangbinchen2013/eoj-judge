@@ -1,0 +1,9 @@
+# OJ 服务端依赖（Python 3.10+）
+# 安装: pip install -r requirements.txt
+
+fastapi>=0.115          # Web 框架（提交 API / 回调端点 / 下载端点）
+uvicorn[standard]>=0.30 # ASGI 服务器
+httpx>=0.27             # GitHub REST API 客户端（dispatch / 查 run）
+python-multipart>=0.0.9 # multipart 上传（用户提交代码文件）
+pydantic>=2.7           # 请求/响应校验（随 fastapi 安装）
+pytest>=8.0             # 测试（tests/ 用）

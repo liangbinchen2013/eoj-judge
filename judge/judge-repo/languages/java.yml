@@ -1,0 +1,18 @@
+# Java 语言编译/运行配置
+# 环境: Ubuntu (GitHub Actions ubuntu-latest)
+
+image: eclipse-temurin:21-jdk
+
+compile:
+  - javac
+  - Main.java
+
+run:
+  # -Xmx 由 worker 按 memory_limit_mb × factor 动态注入
+  - java
+  - -Xmx256m
+  - Main
+
+memory_factor: 1.5
+
+source_file: Main.java
