@@ -1,0 +1,28 @@
+.error-boundary {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.error-boundary-icon {
+  color: var(--error);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.error-boundary-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.error-boundary-actions {
+  display: flex;
+  gap: 12px;
+}
