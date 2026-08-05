@@ -1,0 +1,180 @@
+.problem-list-detail-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.list-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.list-info-header {
+  margin-bottom: 12px;
+}
+
+.list-info-title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.list-icon {
+  color: var(--accent);
+}
+
+.list-detail-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.list-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.list-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.list-problems-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list-problems-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 20px 24px 0;
+}
+
+.empty-problems {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.list-problems-table {
+  margin-top: 16px;
+}
+
+.list-problems-table-header {
+  display: grid;
+  grid-template-columns: 50px 1fr 200px;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 24px;
+  background: var(--bg-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.list-problem-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 200px;
+  gap: 8px;
+  align-items: center;
+  padding: 14px 24px;
+  border-top: 1px solid var(--border);
+  transition: all var(--transition);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.list-problem-row:hover {
+  background: var(--bg-tertiary);
+}
+
+.col-order {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.col-title {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.col-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.note-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+}
+
+.note-empty {
+  color: var(--text-muted);
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.empty-container h2 {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .list-problems-table-header,
+  .list-problem-row {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .col-note {
+    display: none;
+  }
+}

@@ -1,0 +1,89 @@
+.create-ticket-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.create-ticket-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.create-ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.create-ticket-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ticket-form .form-group {
+  margin-bottom: 16px;
+}
+
+.ticket-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.ticket-form .form-input,
+.ticket-form .form-select,
+.ticket-form .form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.ticket-form .form-input:focus,
+.ticket-form .form-select:focus,
+.ticket-form .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.ticket-form .form-textarea {
+  resize: vertical;
+  min-height: 160px;
+  font-family: inherit;
+}
+
+.ticket-form .form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.ticket-form .form-row .form-group {
+  flex: 1;
+}
+
+.form-error {
+  background: var(--error-bg, #fef2f2);
+  color: var(--error-text, #dc2626);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}

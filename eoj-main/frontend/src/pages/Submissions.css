@@ -1,0 +1,184 @@
+.submissions-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Default & Hydro: larger gap */
+[data-theme-style="default"] .submissions-page,
+[data-theme-style="hydro"] .submissions-page {
+  gap: 20px;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 5px 10px;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.filter-select:focus,
+.filter-select:hover {
+  border-color: var(--accent);
+}
+
+/* Default & Hydro: larger filter select */
+[data-theme-style="default"] .filter-select,
+[data-theme-style="hydro"] .filter-select {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.user-search-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 5px 10px;
+  color: var(--text-muted);
+}
+
+.user-search-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  width: 140px;
+}
+
+.user-search-input input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ── Submissions Table ── */
+.submissions-table {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.submissions-table-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--bg-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  min-width: 700px;
+}
+
+/* Default & Hydro: uppercase header with letter-spacing */
+[data-theme-style="default"] .submissions-table-header,
+[data-theme-style="hydro"] .submissions-table-header {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submission-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+  text-decoration: none;
+  color: var(--text-primary);
+  min-width: 700px;
+}
+
+.submission-row:last-child {
+  border-bottom: none;
+}
+
+.submission-row:hover {
+  background: var(--bg-tertiary);
+}
+
+/* Default & Hydro: border-top on rows instead of border-bottom */
+[data-theme-style="default"] .submission-row,
+[data-theme-style="hydro"] .submission-row {
+  border-bottom: none;
+  border-top: 1px solid var(--border);
+}
+
+[data-theme-style="default"] .submission-row:last-child,
+[data-theme-style="hydro"] .submission-row:last-child {
+  border-bottom: none;
+}
+
+.col-id { width: 60px; color: var(--text-muted); font-size: 13px; }
+.col-user { width: 100px; color: var(--text-secondary); font-size: 13px; }
+.col-problem { flex: 1; font-weight: 500; font-size: 14px; }
+.col-problem:hover { color: var(--accent); }
+.col-lang { width: 100px; color: var(--text-secondary); font-size: 13px; }
+.col-status { width: 140px; }
+.col-score { width: 60px; text-align: center; font-weight: 600; }
+.col-time { width: 80px; color: var(--text-secondary); font-size: 13px; }
+.col-memory { width: 90px; color: var(--text-secondary); font-size: 13px; }
+.col-date { width: 160px; color: var(--text-muted); font-size: 12px; }
+
+.empty-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.empty-page h2 {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.empty-page .empty-icon {
+  color: var(--text-secondary);
+  opacity: 0.4;
+}
+
+.empty-page .empty-desc {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .submissions-page .page-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .submissions-table-header,
+  .submission-row {
+    min-width: 0;
+  }
+
+  .col-lang,
+  .col-score,
+  .col-time,
+  .col-memory,
+  .col-date {
+    display: none;
+  }
+}

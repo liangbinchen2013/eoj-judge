@@ -1,0 +1,353 @@
+.submission-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.submission-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.submission-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submission-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.submission-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}
+
+.info-card label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-card span, .info-card a {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.score-value {
+  color: var(--accent);
+  font-weight: 700 !important;
+}
+
+.testcase-results h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.testcase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.testcase-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.testcase-item.passed {
+  border-left: 3px solid var(--success);
+}
+
+.testcase-item.failed {
+  border-left: 3px solid var(--error);
+}
+
+.tc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.tc-header:hover {
+  background: var(--bg-tertiary);
+}
+
+.tc-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tc-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tc-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.tc-content {
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tc-section label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.tc-section pre {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.tc-section.error label {
+  color: var(--error);
+}
+
+.tc-section.error pre {
+  border-color: var(--error);
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.source-code-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.source-code-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.source-code-editor .cm-editor {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.source-code-editor .cm-editor .cm-scroller {
+  max-height: 500px;
+}
+
+/* Testcase Results Table */
+.testcase-table-wrapper {
+  overflow-x: auto;
+}
+
+.testcase-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+
+.testcase-table thead {
+  background: var(--bg-tertiary);
+}
+
+.testcase-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.testcase-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.testcase-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.testcase-row.passed {
+  border-left: 3px solid var(--success);
+}
+
+.testcase-row.failed {
+  border-left: 3px solid var(--error);
+}
+
+.tc-idx {
+  font-weight: 600;
+  color: var(--text-secondary);
+  width: 40px;
+}
+
+.tc-detail-cell {
+  max-width: 300px;
+}
+
+.tc-detail-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.tc-detail-toggle:hover {
+  color: var(--text-primary);
+}
+
+/* Judge Logs Section */
+.judge-logs-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.judge-logs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.judge-logs-header:hover {
+  background: var(--bg-tertiary);
+}
+
+.judge-logs-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.judge-logs-content {
+  border-top: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.judge-log-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  line-height: 1.5;
+}
+
+.log-type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.log-result .log-type-badge {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.log-error .log-type-badge {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.log-warning .log-type-badge {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.log-message {
+  flex: 1;
+  color: var(--text-primary);
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.log-time {
+  color: var(--text-muted);
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}

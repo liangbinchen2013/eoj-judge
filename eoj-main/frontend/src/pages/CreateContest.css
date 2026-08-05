@@ -1,0 +1,195 @@
+.create-contest-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.create-contest-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.create-contest-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.create-contest-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.contest-form .form-group {
+  margin-bottom: 16px;
+}
+
+.contest-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.contest-form .form-input,
+.contest-form .form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+.contest-form .form-input:focus,
+.contest-form .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contest-form .form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.contest-form .form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.contest-form .form-row .form-group {
+  flex: 1;
+}
+
+.problem-search-results {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.problem-search-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background 0.15s;
+}
+
+.problem-search-item:hover {
+  background: var(--bg-tertiary);
+}
+
+.selected-problems {
+  margin-bottom: 16px;
+}
+
+.selected-problems label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.selected-problems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.selected-problem-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+
+.problem-order {
+  color: var(--text-muted);
+  font-weight: 600;
+  min-width: 24px;
+}
+
+.problem-name {
+  flex: 1;
+  color: var(--text-primary);
+}
+
+.score-input {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 13px;
+  text-align: center;
+}
+
+.score-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.remove-problem-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-problem-btn:hover {
+  color: var(--error);
+  background: var(--error-bg);
+}
+
+.form-error {
+  background: var(--error-bg);
+  color: var(--error);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}

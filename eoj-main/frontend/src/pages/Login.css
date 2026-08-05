@@ -1,0 +1,243 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 108px);
+}
+
+.login-hero {
+  text-align: center;
+  max-width: 480px;
+}
+
+.hero-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.login-hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.btn-github:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.btn-cpoauth {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: #1a1a2e;
+  color: #e0e0ff;
+  border: 1px solid #2a2a4e;
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.btn-cpoauth:hover {
+  background: #2a2a4e;
+  color: #fff;
+}
+
+[data-theme="light"] .btn-cpoauth {
+  background: #eef0ff;
+  color: #1a1a2e;
+  border-color: #c0c4e8;
+}
+
+[data-theme="light"] .btn-cpoauth:hover {
+  background: #dde0ff;
+  color: #1a1a2e;
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: left;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 32px;
+}
+
+.auth-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.toggle-btn {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.toggle-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+}
+
+.auth-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.auth-form label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.form-error {
+  margin-bottom: 16px;
+  color: var(--error);
+  font-size: 14px;
+}
+
+.form-agree {
+  margin-bottom: 16px;
+}
+
+.agree-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.agree-label input[type="checkbox"] {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.agree-label a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.agree-label a:hover {
+  text-decoration: underline;
+}
+
+.form-divider {
+  margin: 24px 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ── Luogu theme: login page ── */
+[data-theme-style="luogu"] .login-page {
+  background: var(--bg-primary);
+}
+
+[data-theme-style="luogu"] .login-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  max-width: 360px;
+  width: 100%;
+  padding: 32px 28px;
+}
+
+[data-theme-style="luogu"] .login-header h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+[data-theme-style="luogu"] .btn-github {
+  background: #fff;
+  color: #333;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+[data-theme-style="luogu"] .btn-github:hover {
+  background: #f6f8fa;
+  border-color: #d0d7de;
+}
+
+[data-theme-style="luogu"] .auth-form input {
+  background: #fff;
+  border-color: var(--border);
+  border-radius: 2px;
+  padding: 8px 12px;
+}
+
+[data-theme-style="luogu"] .auth-form input:focus {
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+[data-theme-style="luogu"][data-theme="dark"] .auth-form input,
+[data-theme-style="luogu"][data-theme="dark"] .btn-github {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}

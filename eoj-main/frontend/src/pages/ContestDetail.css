@@ -1,0 +1,827 @@
+.contest-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.contest-detail-page.contest-running {
+  max-width: 1400px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ── In-contest Navigation Sidebar ── */
+.contest-nav-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 84px;
+  max-height: calc(100vh - 100px);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.nav-countdown {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.nav-sidebar-problems {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.nav-problem-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all var(--transition);
+}
+
+.nav-problem-btn:hover {
+  background: var(--bg-tertiary);
+}
+
+.nav-problem-btn.active {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.nav-problem-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
+  background: var(--bg-tertiary);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.nav-problem-label.label-accepted {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--success);
+}
+
+.nav-problem-label.label-attempted {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--error);
+}
+
+.nav-problem-btn.active .nav-problem-label {
+  background: var(--accent);
+  color: #fff;
+}
+
+.nav-problem-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-sidebar-footer {
+  padding: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.nav-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  transition: all var(--transition);
+}
+
+.nav-sidebar-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+}
+
+/* ── Main Content ── */
+.contest-main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.contest-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.contest-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.contest-info-title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contest-icon {
+  color: var(--accent);
+}
+
+.contest-detail-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contest-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.contest-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.countdown-item.running {
+  color: var(--success);
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.contest-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.badge-ended {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contest-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition);
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.contest-problems,
+.contest-rankings {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.problems-table,
+.rankings-table-enhanced {
+  width: 100%;
+}
+
+.problems-table-header,
+.rankings-table-header {
+  display: grid;
+  padding: 12px 20px;
+  background: var(--bg-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.problems-table-header {
+  grid-template-columns: 60px 1fr 60px 80px;
+}
+
+.rankings-table-header {
+  grid-template-columns: 50px 1fr 80px 80px;
+}
+
+.problem-row,
+.ranking-row {
+  display: grid;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.problem-row {
+  grid-template-columns: 60px 1fr 60px 80px;
+  align-items: center;
+}
+
+.ranking-row {
+  grid-template-columns: 50px 1fr 80px 80px;
+  align-items: center;
+}
+
+.problem-row:hover {
+  background: var(--bg-tertiary);
+}
+
+.col-label {
+  display: flex;
+  align-items: center;
+}
+
+.problem-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.problem-label.label-accepted {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--success);
+}
+
+.problem-label.label-attempted {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--error);
+}
+
+.problem-status-icon.accepted {
+  color: var(--success);
+}
+
+.problem-status-icon.wrong {
+  color: var(--error);
+}
+
+.col-title {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.problem-link {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.problem-link:hover {
+  color: var(--accent);
+}
+
+.col-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.action-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.action-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+}
+
+.col-rank {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.col-user {
+  font-weight: 500;
+}
+
+.user-link {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.user-link:hover {
+  color: var(--accent);
+}
+
+.col-score {
+  font-weight: 700;
+  color: var(--accent);
+  text-align: right;
+}
+
+.col-penalty {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: right;
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* ── Ranking Row Highlight ── */
+.ranking-row.rank-1 {
+  background: rgba(255, 215, 0, 0.06);
+}
+
+.ranking-row.rank-2 {
+  background: rgba(192, 192, 192, 0.06);
+}
+
+.ranking-row.rank-3 {
+  background: rgba(205, 127, 50, 0.06);
+}
+
+/* ── Per-problem Result Cells ── */
+.col-problem {
+  min-width: 60px;
+  text-align: center;
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: var(--radius);
+}
+
+.rankings-table-header .col-problem {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.cell-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  line-height: 1.2;
+}
+
+.cell-score {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.cell-penalty {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.cell-attempts {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.cell-accepted {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--success);
+}
+
+.cell-accepted .cell-score {
+  color: var(--success);
+}
+
+.cell-wrong {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.cell-tle {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.cell-error {
+  background: rgba(239, 68, 68, 0.08);
+  color: var(--error);
+}
+
+.cell-attempted {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.cell-empty {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+/* ── Post-contest Review ── */
+.contest-review {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.review-subtitle {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin: 0;
+}
+
+.review-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.review-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text-primary);
+}
+
+.review-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.review-problem-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: all var(--transition);
+}
+
+.review-problem-card:hover {
+  border-color: var(--accent);
+}
+
+.review-problem-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.review-problem-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.review-problem-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.review-problem-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.empty-tab {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.empty-container h2 {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ── Enhanced Rankings Grid Layout ── */
+.rankings-table-enhanced .rankings-table-header,
+.rankings-table-enhanced .ranking-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 80px 80px repeat(var(--problem-cols, 5), minmax(60px, 1fr));
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .contest-detail-page {
+    flex-direction: column;
+  }
+
+  .contest-nav-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+
+  .nav-sidebar-problems {
+    display: flex;
+    overflow-x: auto;
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .nav-problem-btn {
+    flex-shrink: 0;
+    padding: 8px 10px;
+  }
+
+  .nav-problem-title {
+    display: none;
+  }
+
+  .contest-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contest-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .review-problems-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contest-detail-page {
+    padding: 16px 0;
+  }
+
+  .contest-info-card {
+    padding: 16px;
+  }
+
+  .problems-table-header,
+  .problem-row {
+    grid-template-columns: 50px 1fr 50px 60px;
+  }
+
+  .col-actions {
+    gap: 4px;
+  }
+
+  .action-link {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ── Contest Badges (type/rated/status) ── */
+.contest-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Virtual participant flag ── */
+.virtual-flag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  vertical-align: middle;
+}
+
+/* ── Rating Changes Table ── */
+.rating-changes-table {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.rating-changes-header,
+.rating-change-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 80px 30px 110px 90px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.rating-changes-header {
+  background: var(--bg-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.rating-change-row {
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.rating-change-row:hover {
+  background: var(--bg-tertiary);
+}
+
+.rc-rank {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.rc-user .user-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.rc-user .user-link:hover {
+  text-decoration: underline;
+}
+
+.rc-old,
+.rc-new {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rc-arrow {
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.rc-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  justify-content: flex-end;
+}
+
+.rc-delta.positive {
+  color: var(--success);
+}
+
+.rc-delta.negative {
+  color: var(--error);
+}
+
+.review-section h3 {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .rating-changes-header,
+  .rating-change-row {
+    grid-template-columns: 40px 1fr 60px 20px 80px 70px;
+    gap: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
